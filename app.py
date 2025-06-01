@@ -71,7 +71,9 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-/* Customize success message */
+st.markdown("""
+<style>
+/* CSS code here */
 .stAlert {
     background-color: rgba(0, 0, 0, 0.6) !important;
     border-left: 5px solid #21c55d;
@@ -83,6 +85,8 @@ st.markdown(f"""
     box-shadow: 0 0 10px black;
 }
 </style>
+""", unsafe_allow_html=True)
+
 
 # === App title ===
 st.markdown("<h1 style='text-align: center;'>💼 Salary Predictor in IT Sector</h1>", unsafe_allow_html=True)
