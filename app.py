@@ -32,7 +32,7 @@ st.markdown(
     .dev-text {
         color: white;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 50px;
         margin-top: 8px;
         text-shadow: 1px 1px 2px black;
     }
