@@ -1,13 +1,15 @@
 import streamlit as st
 import pickle
 import numpy as np
+from PIL import Image
 
-# ✅ CSS for background + profile photo + developer text
+# ✅ Background overlay CSS + Developer card with LinkedIn
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/—Pngtree—focusing%20on%20collaboration_16545643.png");
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                          url("https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/—Pngtree—focusing%20on%20collaboration_16545643.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -22,27 +24,55 @@ st.markdown(
     }
 
     .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
-        border: 3px solid white;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border: 4px solid white;
+        box-shadow: 0 0 12px rgba(0,0,0,0.6);
     }
 
     .dev-text {
         color: white;
         font-weight: bold;
-        font-size: 16px;
-        margin-top: 8px;
-        text-shadow: 1px 1px 2px black;
+        font-size: 18px;
+        margin-top: 10px;
+        text-shadow: 2px 2px 3px black;
+    }
+
+    .linkedin-link {
+        font-size: 14px;
+        color: #00acee;
+        text-decoration: none;
+    }
+
+    .linkedin-link:hover {
+        text-decoration: underline;
+        color: #ffffff;
     }
     </style>
 
-    <!-- ✅ HTML: Your uploaded photo + text -->
     <div class="profile-container">
-        <img src="https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/Uniform%20Photo.jpg" class="profile-pic">
+        <img src="data:image/png;base64," class="profile-pic" id="local-photo">
         <div class="dev-text">Developed By Rahul Patel</div>
+        <a href="https://www.linkedin.com/in/rahul-patel-607b29247/" target="_blank" class="linkedin-link">
+            🔗 LinkedIn Profile
+        </a>
     </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# ✅ Show Local Profile Image (base64 encoded)
+import base64
+with open("3d206f3d-dbfa-448c-bb58-d6d656d4a4c0.png", "rb") as f:
+    img_bytes = f.read()
+    b64_image = base64.b64encode(img_bytes).decode()
+
+st.markdown(
+    f"""
+    <script>
+        document.getElementById("local-photo").src = "data:image/png;base64,{b64_image}";
+    </script>
     """,
     unsafe_allow_html=True
 )
@@ -51,7 +81,7 @@ st.markdown(
 model = pickle.load(open('salary_model.pkl', 'rb'))
 
 # ✅ Title
-st.title("💼 Salary Predictor in IT Sector")
+st.markdown("<h1 style='text-align: center; color: white;'>💼 Salary Predictor in IT Sector</h1>", unsafe_allow_html=True)
 
 # ✅ Input
 years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
