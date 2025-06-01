@@ -34,7 +34,7 @@ st.markdown(
         font-family: "Times New Roman";
         font-weight: bold;
         font-size: 25px;
-        margin-top: 8px;
+        margin-top: 12px;
         text-shadow: 1px 1px 2px black;
     }
     </style>
