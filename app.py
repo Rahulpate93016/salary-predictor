@@ -61,6 +61,16 @@ st.markdown(f"""
     </style>
 
     <style>
+
+
+    <div class="developer-box">
+        <img class="profile-img" src="data:image/png;base64,{b64_image}" alt="Developer">
+        <div class="dev-text">Developed by Rahul Patel</div>
+        <a href="https://www.linkedin.com/in/rahul-patel-607b29247/" class="linkedin" target="_blank">🔗 LinkedIn</a>
+    </div>
+""", unsafe_allow_html=True)
+
+
 /* Customize success message */
 .stAlert {
     background-color: rgba(0, 0, 0, 0.6) !important;
@@ -73,13 +83,6 @@ st.markdown(f"""
     box-shadow: 0 0 10px black;
 }
 </style>
-
-    <div class="developer-box">
-        <img class="profile-img" src="data:image/png;base64,{b64_image}" alt="Developer">
-        <div class="dev-text">Developed by Rahul Patel</div>
-        <a href="https://www.linkedin.com/in/rahul-patel-607b29247/" class="linkedin" target="_blank">🔗 LinkedIn</a>
-    </div>
-""", unsafe_allow_html=True)
 
 # === App title ===
 st.markdown("<h1 style='text-align: center;'>💼 Salary Predictor in IT Sector</h1>", unsafe_allow_html=True)
