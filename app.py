@@ -33,7 +33,7 @@ st.markdown(
         color: white;
         font-family: "Times New Roman";
         font-weight: bold;
-        font-size: 25px;
+        font-size: 5px;
         margin-top: 20px;
         text-shadow: 1px 1px 2px black;
     }
