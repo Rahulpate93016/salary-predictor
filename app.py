@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import numpy as np
-import base64
 
 # ====== ✅ BACKGROUND + PROFILE PHOTO + LINKEDIN ======
 st.markdown(
