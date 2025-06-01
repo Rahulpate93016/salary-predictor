@@ -5,7 +5,7 @@ import numpy as np
 # Load the saved model
 model = pickle.load(open('salary_model.pkl', 'rb'))
 
-st.title("Salary Predictor")
+st.title("Salary Predictor in IT Sector")
 
 # Input from user
 years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
