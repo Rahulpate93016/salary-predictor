@@ -75,4 +75,4 @@ years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_val
 if st.button("Predict Salary"):
     input_data = np.array([[years_exp]])
     prediction = model.predict(input_data)
-    st.success(f" Your Salary for {years_exp} years of experience should be = ₹{prediction[0]:,.2f}")
+    st.success(f" Your Salary for {years_exp} years of experience should be = ₹{prediction[0]:,.2f} per month ")
