@@ -28,14 +28,14 @@ st.markdown(
         border: 3px solid white;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
+.dev-text {
+    color: white;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -5px; /* thoda upar le jane ke liye */
+    text-shadow: 1px 1px 2px black;
 
-    .dev-text {
-        color: white;
-        font-family: "Times New Roman";
-        font-weight: bold;
-        font-size: 5px;
-        margin-top: 20px;
-        text-shadow: 1px 1px 2px black;
     }
     </style>
 
