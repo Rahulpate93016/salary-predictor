@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# ====== BACKGROUND + PROFILE PHOTO + LINKEDIN ======
+# ====== BACKGROUND IMAGE + PROFILE PHOTO + LINKEDIN ======
 st.markdown(
     """
     <style>
@@ -10,8 +10,8 @@ st.markdown(
         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                           url("https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/pexels-photo-585752.jpeg");
         background-size: cover;
-        background-attachment: fixed;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         color: white;
     }
 
@@ -52,7 +52,7 @@ st.markdown(
     </style>
 
     <div class="profile-container">
-        <img src="https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/Uniform%20Photo.jpg" class="profile-pic">
+        <img src="https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/Uniform%20Photo.jpg" class="profile-pic" alt="Rahul Patel">
         <div class="dev-text">Developed By Rahul Patel</div>
         <a href="https://www.linkedin.com/in/rahul-patel-607b29247/" target="_blank" class="linkedin-link">
             🔗 LinkedIn Profile
