@@ -31,8 +31,9 @@ st.markdown(
 
     .dev-text {
         color: white;
+        font-family: "Times New Roman", Times, serif;
         font-weight: bold;
-        font-size: 50px;
+        font-size: 25px;
         margin-top: 8px;
         text-shadow: 1px 1px 2px black;
     }
