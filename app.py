@@ -4,38 +4,38 @@ import numpy as np
 
 # ✅ CSS for background + profile photo + developer text
 st.markdown(
-    f"""
+    """
     <style>
-    .stApp {{
+    .stApp {
         background-image: url("https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/—Pngtree—focusing%20on%20collaboration_16545643.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-    }}
+    }
 
-    .profile-container {{
+    .profile-container {
         position: fixed;
         bottom: 20px;
         right: 20px;
         text-align: center;
         z-index: 9999;
-    }}
+    }
 
-    .profile-pic {{
+    .profile-pic {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         border: 3px solid white;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }}
+    }
 
-    .dev-text {{
+    .dev-text {
         color: white;
         font-weight: bold;
         font-size: 16px;
         margin-top: 8px;
         text-shadow: 1px 1px 2px black;
-    }}
+    }
     </style>
 
     <!-- ✅ HTML: Your uploaded photo + text -->
