@@ -2,53 +2,60 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# ====== ✅ BACKGROUND + PROFILE PHOTO + LINKEDIN ======
+# ====== BASE64 ENCODED IMAGE (replace this with your full base64 string) ======
+# For demo, this is a tiny transparent PNG string.
+# Replace this with your actual base64 string of team_collaboration.png
+image_base64 = (
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABAABJzQnCgAAAABJRU5ErkJggg=="
+)
+
+# ====== CSS with embedded background image ======
 st.markdown(
-    """
+    f"""
     <style>
-    .stApp {
+    .stApp {{
         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                          url("https://raw.githubusercontent.com/Rahulpate93016/salary-predictor/main/team_collaboration.png");
+                          url("data:image/png;base64,{image_base64}");
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
         color: white;
-    }
+    }}
 
-    .profile-container {
+    .profile-container {{
         position: fixed;
         bottom: 20px;
         right: 20px;
         text-align: center;
         z-index: 9999;
-    }
+    }}
 
-    .profile-pic {
+    .profile-pic {{
         width: 120px;
         height: 120px;
         border-radius: 50%;
         border: 3px solid white;
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    }
+    }}
 
-    .dev-text {
+    .dev-text {{
         color: white;
         font-weight: bold;
         font-size: 16px;
         margin-top: 10px;
         text-shadow: 1px 1px 2px black;
-    }
+    }}
 
-    .linkedin-link {
+    .linkedin-link {{
         color: #00acee;
         font-size: 14px;
         text-decoration: none;
-    }
+    }}
 
-    .linkedin-link:hover {
+    .linkedin-link:hover {{
         text-decoration: underline;
         color: #ffffff;
-    }
+    }}
     </style>
 
     <div class="profile-container">
@@ -59,19 +66,19 @@ st.markdown(
         </a>
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
-# ====== ✅ LOAD MODEL ======
+# ====== LOAD MODEL ======
 model = pickle.load(open('salary_model.pkl', 'rb'))
 
-# ====== ✅ APP TITLE ======
+# ====== APP TITLE ======
 st.markdown("<h1 style='text-align: center; color: white;'>💼 Salary Predictor in IT Sector</h1>", unsafe_allow_html=True)
 
-# ====== ✅ USER INPUT ======
+# ====== USER INPUT ======
 years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
 
-# ====== ✅ PREDICT BUTTON ======
+# ====== PREDICT BUTTON ======
 if st.button("Predict Salary"):
     input_data = np.array([[years_exp]])
     prediction = model.predict(input_data)
