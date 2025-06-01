@@ -66,9 +66,7 @@ st.markdown(
 model = pickle.load(open('salary_model.pkl', 'rb'))
 
 # ====== APP TITLE ======
-st.markdown("<h1 style='text-align: center; color: white;'>💼 IT salary predictor model
-
-</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>💼 Salary Predictor in IT Sector through your experience</h1>", unsafe_allow_html=True)
 
 # ====== USER INPUT ======
 years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
@@ -77,4 +75,4 @@ years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_val
 if st.button("Predict Salary"):
     input_data = np.array([[years_exp]])
     prediction = model.predict(input_data)
-    st.success(f"Your salary for {years_exp} years of experience should be :  ₹{prediction[0]:,.2f}")
+    st.success(f" Your Salary for {years_exp} years of experience should be = ₹{prediction[0]:,.2f}")
