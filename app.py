@@ -1,6 +1,32 @@
 import streamlit as st
 import pickle
 import numpy as np
+import base64 
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as img_file:
+        encoded = base64.b64encode(img_file.read()).decode()
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("data:image/jpg;base64,{encoded}");
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+# 🖼️ Background image add karo — file name yaha do
+add_bg_from_local("—Pngtree—focusing on collaboration_16545643.jpg")  
+
+# 🔍 Load the saved model
+model = pickle.load(open('salary_model.pkl', 'rb'))
+
+
 
 # Load the saved model
 model = pickle.load(open('salary_model.pkl', 'rb'))
