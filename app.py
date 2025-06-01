@@ -51,7 +51,7 @@ st.markdown(
 model = pickle.load(open('salary_model.pkl', 'rb'))
 
 # ✅ Title
-st.title("💼 Salary Predictor of  IT Sector")
+st.title("💼 IT Salary Forecast Model")
 
 # ✅ Input
 years_exp = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
