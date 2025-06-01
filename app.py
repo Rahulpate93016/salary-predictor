@@ -60,6 +60,20 @@ st.markdown(f"""
     }}
     </style>
 
+    <style>
+/* Customize success message */
+.stAlert {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-left: 5px solid #21c55d;
+    color: white !important;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+</style>
+
     <div class="developer-box">
         <img class="profile-img" src="data:image/png;base64,{b64_image}" alt="Developer">
         <div class="dev-text">Developed by Rahul Patel</div>
