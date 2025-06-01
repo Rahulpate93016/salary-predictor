@@ -35,7 +35,7 @@ st.markdown(
     font-size: 25px;
     margin-top: -5px; /* thoda upar le jane ke liye */
     text-shadow: 1px 1px 2px black;
-
+}
     }
     </style>
 
